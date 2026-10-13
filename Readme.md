@@ -15,9 +15,9 @@
 1. Variables (The 3 People)
 We have three people to assign to teams:
 
-Alex
-Bob
-Hi
+- Alex
+- Bob
+- Hi
 
 2. Domains (The Choices)
 Each person can be assigned to one of two teams:
