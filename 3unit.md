@@ -16,40 +16,10 @@
 • Domains (\(D\)): A set of allowable values for each variable (\(D = \{D_1, D_2, \dots, D_n\}\)). Domains can be finite, infinite, or continuous.
 • Constraints (\(C\)): A set of rules or restrictions that specify valid combinations of values for a subset of variables.
 
+<img width="2216" height="1288" alt="image" src="https://github.com/user-attachments/assets/f234473c-741b-4dbf-a269-9a5d6e771e3b" />
 
-# Example
-  Team Assignment Problem
-1. Variables (The 3 People)
-We have three people to assign to teams:
 
-- Alex
-- Bob
-- Hi
 
-2. Domains (The Choices)
-Each person can be assigned to one of two teams:
-Team 1
-Team 2
 
-4. Constraints (The Rules)
-Alex and Bob are enemies: They cannot be on the same team.
-Constraint: Alex != Bob
-Constraint: Hi != Bob
 
-The Stranger has no enemies: There are no restrictions on which team the Stranger can join.
 
-6. Solution (A Valid Assignment)
-
-Since there are only two teams, we can assign the people as follows:
-
-Person	Assigned Team
-Alex	Team 1
-Bob	Team 2
-hi	Team 1
-Why Does This Work?
-Alex is assigned to Team 1.
-Bob is assigned to Team 2, keeping Alex and Bob on separate teams.
-The hi can join either team because there are no constraints on their assignment.
-5. Conclusion
-
-This is a valid solution because all constraints are satisfied. The Stranger can be assigned to either Team 1 without violating any rules.
