@@ -10,6 +10,13 @@
 
 - Resource Allocation: Distributing resources efficiently without overuse
 
+
+### Every CSP is formally defined by a triple \((X, D, C)\):
+• Variables (\(X\)): A set of unknown elements that need values (\(X = \{X_1, X_2, \dots, X_n\}\)).
+• Domains (\(D\)): A set of allowable values for each variable (\(D = \{D_1, D_2, \dots, D_n\}\)). Domains can be finite, infinite, or continuous.
+• Constraints (\(C\)): A set of rules or restrictions that specify valid combinations of values for a subset of variables.
+
+
 # Example
   Team Assignment Problem
 1. Variables (The 3 People)
