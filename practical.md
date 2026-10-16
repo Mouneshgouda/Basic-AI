@@ -18,3 +18,34 @@ for a in A:
     break
 
 ```
+
+
+```python
+def alphabeta(depth, node, alpha, beta, is_max):
+    if depth == 2:
+        return node
+
+    if is_max:
+        best = -999
+        for child in [3, 5]:
+            val = alphabeta(depth + 1, child, alpha, beta, False)
+            best = max(best, val)
+            alpha = max(alpha, best)
+
+            if alpha >= beta:
+                break
+        return best
+
+    else:
+        best = 999
+        for child in [2, 4]:
+            val = alphabeta(depth + 1, child, alpha, beta, True)
+            best = min(best, val)
+            beta = min(beta, best)
+
+            if alpha >= beta:
+                break
+        return best
+
+print("Best value:", alphabeta(0, 0, -999, 999, True))
+```
