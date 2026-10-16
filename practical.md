@@ -36,45 +36,26 @@ Consider the following game tree, where MAX tries to maximize the score and MIN 
            3    5 6    9
 
 🔵 MAX: Chooses the maximum value.
+
 🔴 MIN: Chooses the minimum value.
-✂️ Pruning: Skips branches that cannot affect the final result.
+
+- ✂️ Pruning: Skips branches that cannot affect the final result.
 ⚙️ Step-by-Step Explanation
-Step 1: Initialize Alpha and Beta
+ 
+- Step 1: Initialize Alpha and Beta
 
-Initially, set:
+- Initially, set:
 
-Alpha (α) = −∞ — The best value MAX can guarantee so far.
-Beta (β) = +∞ — The best value MIN can guarantee so far.
-Step 2: Evaluate the First MIN Node
+  Alpha (α) = −∞ — The best value MAX can guarantee so far.
+  Beta (β) = +∞ — The best value MIN can guarantee so far.
+- Step 2: Evaluate the First MIN Node
 
-The first MIN node has two terminal values: 3 and 5.
+  The first MIN node has two terminal values: 3 and 5.
 
-MIN selects the smaller value:
+  MIN selects the smaller value:
 
-min
-⁡
-(
-3
-,
-5
-)
-=
-3
-
-MAX updates its best value:
-
-𝛼
-=
-max
-⁡
-(
-−
-∞
-,
-3
-)
-=
-3
+min(3,5)=3
+MAX updates its best value:𝛼=max(−∞,3)=3
 
 Current values:
 
@@ -86,29 +67,11 @@ The second MIN node has two terminal values: 6 and 9.
 
 MIN selects the smaller value:
 
-min
-⁡
-(
-6
-,
-9
-)
-=
-6
+min⁡(6,9)=6
 
 MAX updates its best value:
 
-𝛼
-=
-max
-⁡
-(
-3
-,
-6
-)
-=
-6
+𝛼=max(3,6)=6
 
 Current values:
 
@@ -118,15 +81,7 @@ Step 4: Determine the Final Result
 
 MAX chooses the larger of the two MIN-node results:
 
-max
-⁡
-(
-3
-,
-6
-)
-=
-6
+max(3,6)=6
 
 🏆 Final Answer: 6
 
@@ -134,38 +89,12 @@ max
 
 Alpha-Beta Pruning uses the following condition:
 
-𝛼
-≥
-𝛽
+𝛼≥𝛽
 
 When this condition is satisfied, the remaining branches of the current search can be skipped because they cannot change the final decision.
 
 In this example: No pruning occurs because all four terminal nodes (3, 5, 6, and 9) are evaluated.
 
-📊 Complexity Analysis
-Case	Time Complexity
-Worst case	
-𝑂
-(
-𝑏
-𝑑
-)
-
-Best case	
-𝑂
-(
-𝑏
-𝑑
-/
-2
-)
-
-Where:
-
-b = branching factor (number of children per node)
-d = maximum depth of the game tree
-
-With good move ordering, Alpha-Beta Pruning can significantly reduce the number of nodes explored.
 
 ✅ Conclusion
 
